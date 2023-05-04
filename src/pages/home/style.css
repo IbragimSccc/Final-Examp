@@ -1,0 +1,25 @@
+section .slider {
+    height: 100vh;
+}
+.container {
+    margin: 0 30px;
+}
+
+.content {
+    display: flex;
+}
+
+.categories {
+    border-right: 1px solid;
+    width: 20%;
+    height: 100vh;
+    padding: 25px;
+}
+
+.card-content {
+    width: 80%;
+    height: 100vh;
+    padding: 25px;
+    display: flex;
+    flex-wrap: wrap;
+}

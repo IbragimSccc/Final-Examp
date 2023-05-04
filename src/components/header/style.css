@@ -1,0 +1,39 @@
+header {
+    height: 90px;
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #f2f2f2;
+    box-shadow: 0px 5px 10px rgb(77, 76, 76);
+}
+
+.left-side {
+    display: flex;
+}
+
+.header-info {
+    margin-left: 10px;
+}
+
+.header-info h3 {
+    font-size: 20px;
+    line-height: 15px;
+    text-transform: uppercase;
+}
+
+.header-info p {
+    font-size: 14px;
+}
+
+.left-side img {
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+}
+
+.right-side button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}

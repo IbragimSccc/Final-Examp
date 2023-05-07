@@ -6,20 +6,20 @@ export const Category = () => {
     const [products, setProducts] = useState([])
   
     useEffect(() => {
-      mockFetch('/products.json')
+      fetch('http://16.16.167.57/api/v1/items/category/')
         .then(res => res.json())
         .then(data => {
           setProducts(data)
         })
     }, [])
   
-    const categories = [...new Set(products.map(product => product.category))]
+    const categories = [...new Set(products.map(product => product.name))]
   
     return (
       <div className='category-block'> 
-        {categories.map((category) => (
+        {categories.map((name) => (
           <div className='category-box'>
-                <button>{category}</button>        
+                <button>{name}</button>        
           </div>
         ))}
       </div>

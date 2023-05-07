@@ -1,0 +1,11 @@
+.login-block {
+    width: 500px;
+    height: 450px;
+    border-radius: 35px;
+    background-color: aqua;
+}
+
+#logout {
+    width: 100%;
+    height: 50px;
+}

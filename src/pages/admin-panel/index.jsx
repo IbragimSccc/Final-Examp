@@ -43,3 +43,17 @@
 //     </HeaderWrapper>
 //   )
 // })
+
+import './style.css'
+
+export const AdminPage = () => {
+    return (
+        <>
+            <div className="login-block">
+                <input type="text" id="logout" />
+                <input type="paswword" />
+                <button></button>
+            </div>
+        </>
+    )
+}

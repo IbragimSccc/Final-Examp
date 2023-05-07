@@ -1,8 +1,5 @@
-section .slider {
-    height: 100vh;
-}
 .container {
-    margin: 0 30px;
+    margin: 20px 30px 0 30px;
 }
 
 .content {
@@ -10,9 +7,10 @@ section .slider {
 }
 
 .categories {
-    border-right: 1px solid;
+    background-color: rgb(125, 128, 128);
+    border: 1px solid;
     width: 20%;
-    height: 100vh;
+    height: 100%;
     padding: 25px;
 }
 

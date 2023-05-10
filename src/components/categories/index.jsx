@@ -6,7 +6,7 @@ export const Category = () => {
     const [products, setProducts] = useState([])
   
     useEffect(() => {
-      fetch('http://16.16.167.57/api/v1/items/category/')
+      fetch('http://16.171.59.219/api/v1/items/category/')
         .then(res => res.json())
         .then(data => {
           setProducts(data)

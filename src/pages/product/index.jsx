@@ -14,7 +14,7 @@ export const ProductPage = () => {
 
     useEffect(() => {
         setLoading(true)
-        fetch(`http://16.16.167.57/api/v1/items/product/${id}`)
+        fetch(`http://16.171.59.219/api/v1/items/product/${id}`)
             .then(res => res.json())
             .then(data => {
                 setProduct(data)

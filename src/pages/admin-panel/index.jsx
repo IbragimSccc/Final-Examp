@@ -7,7 +7,7 @@ import './style.css'
 export const AdminPage = forwardRef(() => {
     const [user, setUser] = useState(null)
     useEffect(() => {
-        fetch('http://16.16.167.57/token/', {
+        fetch('http://16.171.59.219/token/', {
             method: 'GET',
             headers: {
                 'Authorization': localStorage.getItem('token'),
@@ -25,6 +25,7 @@ export const AdminPage = forwardRef(() => {
                     ? (
                         <div className="user">
                             <div>{user.username}</div>
+                            <img src={user.image} alt="" />
                             <button> login</button>
                         </div>
                     )

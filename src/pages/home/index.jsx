@@ -16,7 +16,7 @@ export const HomePage = () => {
 
     useEffect(() => {
         setLoading(true)
-        fetch('http://16.16.167.57/api/v1/items/product/')
+        fetch('http://16.171.59.219/api/v1/items/product/')
           .then(res => res.json())
           .then(data => {
             setEvents(data)

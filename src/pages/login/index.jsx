@@ -12,36 +12,39 @@ export const LoginPage = () => {
 
     const handleLogin = (e) => {
         e.preventDefault()
-        fetch('http://16.16.167.57/token/', {
+        fetch('http://16.171.59.219/token/', {
             method: 'POST',
             body: JSON.stringify({ username, password }),
             headers: {
-                'Content-Type': 'application/json'
+                'Content-Type': 'application/json',
             }
         })            
             .then(res => res.json())
             .then((data) => {
-            localStorage.setItem('token', data.token)
+            localStorage.setItem('token', 'token ' + data.token)
         })
     }
     
     return (
         <div className="login-block" >
             <form className="login-box">
-                <input
-                    type="text"
-                    name="username"
-                    placeholder="Логин"
-                    value={username}
-                    onChange={(e) => setUsername(e.target.value)}
-                />
-                 <input
-                    type="password"
-                    name="password"
-                    placeholder="Пароль"
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)}
-                />
+                <div className="input-box">
+                    <input
+                        type="text"
+                        name="username"
+                        placeholder="Логин"
+                        value={username}
+                        onChange={(e) => setUsername(e.target.value)}
+                    />
+                    <input
+                        type="password"
+                        name="password"
+                        placeholder="Пароль"
+                        value={password}
+                        onChange={(e) => setPassword(e.target.value)}
+                    />
+                </div>
+                
                 <button onClick={handleLogin}>
                     Войти
                 </button>

@@ -13,7 +13,7 @@ export const Header = () => {
                     </Link>                    
                 </div>
                 <div className="header-info">
-                    <h3>Smart Shop</h3>
+                    <h1>Smart Shop</h1>
                     <p>Магазин телефонов</p>
                 </div>
             </div>

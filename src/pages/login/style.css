@@ -1,0 +1,28 @@
+.login-block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-box {
+    width: 500px;
+    height: 450px;
+    padding: 30px;
+    border-radius: 35px;
+    background-color: aqua;
+
+}
+
+.login-box input {
+    width: 100%;
+    height: 60px;
+    padding: 10px 20px;
+    margin-bottom: 25px;
+    border-radius: 25px;
+}
+
+.login-box button {
+    width: 100%;
+    height: 50px;
+    border-radius: 25px;
+}

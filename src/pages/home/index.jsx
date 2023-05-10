@@ -1,13 +1,15 @@
 
 
 import './style.css'
-import { useEffect, useState } from 'react'
+import { useContext, useEffect, useState } from 'react'
 import { Card } from '../../components/card'
 import { Category } from '../../components/categories'
+import {AppContext} from '../../App'
 import SliderBox from '../../components/slider/slider.jsx'
 
-export const HomePage = () => {
 
+export const HomePage = () => {
+    const {products: theProduct, setProducts} = useContext(AppContext)
     const [products, setEvents] = useState([])
     const [loading, setLoading] = useState(false)
     const [error, setError] = useState('')
@@ -24,7 +26,8 @@ export const HomePage = () => {
         })
         .finally(() => {
           setLoading(false)
-        })  
+        })
+        window.scrollTo(0, 0)
     }, [])
 
     return (
@@ -43,11 +46,11 @@ export const HomePage = () => {
                         {error && <div>{error}</div>}
                             {products.map((product) => (
                                 <Card
-                                    key={product.id}
+                                    id={product.id}
                                     name={product.name}
                                     price={product.price}
                                     image={product.image}
-                                    onClickPlus={(products) => console.log(product)}
+                                    onClickPlus={() => setProducts([...theProduct,product])}
                                 />
                             ))}                            
                         </div>

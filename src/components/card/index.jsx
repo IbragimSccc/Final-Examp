@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState, } from 'react'
 import { Link } from 'react-router-dom'
 import { PlusIcon } from './plus-icon'
 import { CheckMark } from './check-mark-icon'

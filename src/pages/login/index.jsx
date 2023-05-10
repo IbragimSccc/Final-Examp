@@ -1,68 +1,51 @@
-// import styled from "styled-components"
-// import { forwardRef, useEffect, useState } from "react"
-// import { Container } from "../../styles/adaptive"
-// import { Link } from "react-router-dom"
 
-// const HeaderWrapper = styled.header`
-//   background-color: #fff;
-//   width: 100%;
-//   align-items: center;
-//   height: 70px;
-//   box-shadow: 0px 4px 10px 0 rgb(0, 0, 0, 0.05);
-// `
-// const Content = styled(Container)`
-//   display: flex;
-//   justify-content: space-between;
-//   align-items: center;
-//   height: 100%;
-// `
-// const LogoutButton = styled.button`
-//   margin-left: 40px;
-// `
 
-// export const Header = forwardRef((props, ref) => {
-//   const [user, setUser] = useState(null)
-//   useEffect(() => {
-    
-//     fetch('http://localhost:1717/me', {
-//       headers: {
-//         'X-Auth': localStorage.getItem('token')
-//       }
-//     })
-//       .then(res => res.json())
-//       .then(data => {
-//         if (data?.username) setUser(data)
-//       })
-//   }, [])
+import { useState } from "react"
 
-//   return (
-//     <HeaderWrapper ref={ref}>
-//       <Content>
-//         <div>Logo</div>
-        
-//         <div>
-//           {
-//             user
-//             ? (
-//               <>
-//               <div>{user.username}</div>
-//               <LogoutButton onClick={() => localStorage.removeItem('token')}>Log out</LogoutButton>
-//               </>
-//             )
-//             : (
-//               <Link to="/auth/login">Go to Login</Link>
-//             )
-//           }
-          
-//         </div>
-        
-//       </Content>
-//     </HeaderWrapper>
-//   )
-// })
+
+import './style.css'
 
 export const LoginPage = () => {
+    const [username, setUsername] = useState('')
+    const [password, setPassword] = useState('')
+    
+
+    const handleLogin = (e) => {
+        e.preventDefault()
+        fetch('http://16.16.167.57/token/', {
+            method: 'POST',
+            body: JSON.stringify({ username, password }),
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        })            
+            .then(res => res.json())
+            .then((data) => {
+            localStorage.setItem('token', data.token)
+        })
+    }
+    
     return (
-        <div>Login</div>
+        <div className="login-block" >
+            <form className="login-box">
+                <input
+                    type="text"
+                    name="username"
+                    placeholder="Логин"
+                    value={username}
+                    onChange={(e) => setUsername(e.target.value)}
+                />
+                 <input
+                    type="password"
+                    name="password"
+                    placeholder="Пароль"
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
+                />
+                <button onClick={handleLogin}>
+                    Войти
+                </button>
+            </form>
+        </div>
     )
 }

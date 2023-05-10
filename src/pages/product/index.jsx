@@ -8,7 +8,7 @@ import './style.css'
 
 export const ProductPage = () => {
     const { id } = useParams()
-    const [products, setProduct] = useState(null)
+    const [product, setProduct] = useState(null)
     const [loading, setLoading] = useState(false)
     const [error, setError] = useState('')
 
@@ -35,7 +35,7 @@ export const ProductPage = () => {
         return <div>{error}</div>
     }
 
-    if (!products) {
+    if (!product) {
         return null
     }
 
@@ -44,11 +44,11 @@ export const ProductPage = () => {
             <div className="container">
                 <div className="product-block">
                     <div className="image-block">
-                        <img src={products.image} alt="" />
+                        <img src={product.image} alt="" />
                     </div>
                     <div className="content-block">
-                        <h5>{products.name}</h5>
-                        <h4>Цена: {products.price} $</h4>
+                        <h5>{product.name}</h5>
+                        <h4>Цена: {product.price} $</h4>
                         <button>Добавить в корзину</button>
                         <div className="icon-block">
                             <div className="icons">
@@ -65,7 +65,7 @@ export const ProductPage = () => {
                         </div>
                     </div>
                 </div>
-                <div className="product-bottom">{products.description}</div>
+                <div className="product-bottom">{product.description}</div>
             </div>
         </>
     )

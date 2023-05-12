@@ -32,20 +32,21 @@ export const HomePage = () => {
 
     return (
         <main>
-            <section className='slider'>
+            <section>
                 <SliderBox/>
             </section>
-            <section>
+            <section className="">
                 <div className="container">
                     <div className="content">
                         <div className="categories">
-                            <Category />
+                            <Category/>
                         </div>
                         <div className="card-content">
                         {loading && <div>Loading...</div>}
                         {error && <div>{error}</div>}
                             {products.map((product) => (
                                 <Card
+                                    key={product.id}
                                     id={product.id}
                                     name={product.name}
                                     price={product.price}

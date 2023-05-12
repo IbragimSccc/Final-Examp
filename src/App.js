@@ -13,9 +13,11 @@ import { createContext, useState } from 'react';
 const mainRoutes = [
 
   { path: 'product/:id', element: <ProductPage /> },
+  { path: 'product', element: <ProductPage /> },
   { path: 'basket', element: <BasketPage /> },
   { path: 'login', element: <LoginPage /> },
   { path: 'admin', element: <AdminPage /> },
+  { path: 'create/:id', element: <CreatePage /> },
   { path: 'create', element: <CreatePage /> },
 ]
 

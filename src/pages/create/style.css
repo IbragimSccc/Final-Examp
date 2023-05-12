@@ -1,0 +1,53 @@
+.form-submit {
+    height: 110vh;
+    display: flex;
+    justify-content: center;
+}
+
+.form-block {
+    width: 500px;
+    height: 500px;
+    padding: 25px;
+}
+
+.input-form {
+    padding: 10px 20px;
+}
+
+.input-form input {
+    width: 100%;
+    height: 40px;
+    padding: 10px;
+}
+
+.input-form textarea {
+    resize: none;
+    width: 100%;
+    height: 90px;
+    padding: 10px;
+}
+
+.input-form label {
+    font-size: 17px;
+}
+
+.input-form button {
+    width: 100%;
+    height: 40px;
+    font-size: 18px;
+    background: grey;
+    border: none;
+    border-radius: 10px;
+
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 20px;
+    letter-spacing: 0.5px;
+    color: #fff;
+    transition: 0.5s ease;
+    cursor: pointer;
+}
+
+.input-form:hover {
+    transform: scale(1.1);
+}

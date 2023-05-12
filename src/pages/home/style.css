@@ -1,3 +1,4 @@
+
 .container {
     margin: 20px 30px 0 30px;
 }
@@ -7,17 +8,27 @@
 }
 
 .categories {
-    background-color: rgb(125, 128, 128);
-    border: 1px solid;
+    background: none;
+    border-right: 2px solid;
     width: 20%;
-    height: 100%;
-    padding: 25px;
+    padding: 20px;
 }
 
 .card-content {
     width: 80%;
-    height: 100vh;
+    height: 100%;
     padding: 25px;
     display: flex;
     flex-wrap: wrap;
+
+}
+
+@media screen and (max-width: 620px) {
+    .categories {
+        width: 35%;
+    }
+    
+    .container {
+        margin: 20px 10px 0 10px
+    }
 }

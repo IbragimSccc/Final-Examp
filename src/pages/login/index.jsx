@@ -1,11 +1,13 @@
 
 
 import { useState } from "react"
+import { useNavigate } from "react-router-dom"
 
 
 import './style.css'
 
 export const LoginPage = () => {
+    const history = useNavigate()
     const [username, setUsername] = useState('')
     const [password, setPassword] = useState('')
     
@@ -21,7 +23,10 @@ export const LoginPage = () => {
         })            
             .then(res => res.json())
             .then((data) => {
-            localStorage.setItem('token', 'token ' + data.token)
+                if (data.token) {
+                    localStorage.setItem('token', 'token ' + data.token)
+                    history('/admin')
+                }           
         })
     }
     

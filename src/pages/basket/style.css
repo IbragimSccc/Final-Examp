@@ -76,6 +76,10 @@
     display: flex;
 }
 
+.right {
+    display: flex;
+}
+
 .item {
     display: flex;
     justify-content: space-between;
@@ -124,4 +128,118 @@
     background: rgb(235, 168, 168);
     box-shadow: 0px 0px 10px 5px rgb(247, 95, 95);
     border: none;
+}
+
+
+
+@media screen and (max-width: 670px) {
+    .basket-wrapper button {
+        width: 170px;
+        font-size: 15px;
+    }
+
+    .item {
+        height: 100px;
+    }
+
+    .item-img {
+        width: 100px;
+        height: 90px;
+    }
+
+    .item-info span {
+        font-size: 17px;
+    }
+
+    .item-info p {
+        font-size: 17px;
+    }
+
+    .delete-item {
+        width: 35px;
+        height: 35px;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .basket-wrapper button {
+        width: 80%;
+        font-size: 18px;
+        margin-left: 0;
+        left: 10%;
+    }
+
+    .item {
+        padding: 5px 20px;
+    }
+
+    .item-info span {
+        font-size: 13px;
+    }
+
+    .item-info p {
+        font-size: 13px;
+    }
+
+    .delete-item {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+@media screen and (max-width: 420px) {
+
+    .items-block {
+        padding: 15px;
+    }
+
+    .item {
+        padding: 5px 10px;
+    }
+
+    .item-img {
+        width: 75px;
+        height: 70px;
+    }
+
+    .item-info span {
+        font-weight: 500;
+        font-size: 10px;
+    }
+
+    .item-info p {
+        font-size: 10px;
+    }
+
+    .delete-item {
+        width: 30px;
+        height: 30px;
+    }
+
+}
+
+@media screen and (max-width: 330px) {
+    .basket-wrapper button {
+        font-size: 15px;
+    }
+
+    .box-img {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+@media screen and (max-width: 230px) {
+    .basket-wrapper button {
+        width: 70%;
+        height: 35px;
+        font-size: 10px;
+        font-weight: 400;
+        left: 15%;
+    }
+
+    .box-img {
+        width: 150px;
+        height: 150px;
+    }
 }
